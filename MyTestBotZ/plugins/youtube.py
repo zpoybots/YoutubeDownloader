@@ -12,7 +12,7 @@ AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1248974748 140147
     
 ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
 
-@Client.on_message(Filters.regex(ytregex))
+@Client.on_message(Filters.regex(.https.))
 async def ytdl(bot, message):
     if message.from_user.id not in AUTH_USERS:
         return
