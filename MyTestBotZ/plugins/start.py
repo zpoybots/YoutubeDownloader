@@ -5,12 +5,13 @@ from pyrogram import Client, Filters, StopPropagation, InlineKeyboardButton, Inl
 async def start(client, message):
     # return
     joinButton = InlineKeyboardMarkup([
-        [InlineKeyboardButton("Channel", url="https://t.me/MyTestBotz"), InlineKeyboardButton("Creator", url="https://telegram.me/OO7ROBot") ],
+        [InlineKeyboardButton("Channel", url="https://t.me/teamosmani"), InlineKeyboardButton("Creator", url="https://telegram.me/ribajosmani") ],
         [InlineKeyboardButton(
-            "🍿 Source Code 🍿", url="https://github.com/OO7ROBot/YoutubeDownloaderBot")]
+            "🍿 Source Code 🍿", url="https://github.com/Ribaj")]
     ])
     welcomed = f"""Hey <b>{message.from_user.first_name}</b>\nA Simple YouTube Downloader Bot that can:
+  ➠Muuqaalada YouTube Kala Dag Adigoo Linkga Past Ku dhaheysid.
   ➠ Download YouTube videos
-  ➠ Download audio from YouTube videos \n\n Made with ♥️ by @MyTestBotZ"""
+  ➠ Download audio from YouTube videos \n\n Made with ♥️ by @ribajosmani"""
     await message.reply_text(welcomed, reply_markup=joinButton)
     raise StopPropagation
